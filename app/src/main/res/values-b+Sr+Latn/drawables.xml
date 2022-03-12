@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="flag_icon">@drawable/flag_sr</drawable>
+</resources>

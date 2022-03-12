@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplikacija za pozdrave</string>
+    <string name="enter_name">Unesite ime</string>
+    <string name="greet">Pozdravi</string>
+    <string name="save">Sačuvaj</string>
+    <string name="cancel">Odustani</string>
+    <string name="LastName">Prezime</string>
+    <string name="FirstName">Ime</string>
+    <string name="message">Ti se zoveš %1$s %2$s .</string>
+    <string name="action_canceled">Otkazana akcija</string>
+    <string name="action_incomplete">Popunite sva polja</string>
+    <string name="final_action">Sada možete pozdraviti!</string>
+</resources>

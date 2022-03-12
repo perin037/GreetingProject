@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Апликација за поздраве</string>
+    <string name="enter_name">Унесите име</string>
+    <string name="greet">Поздрави</string>
+    <string name="cancel">Одустани</string>
+    <string name="save">Сачувај</string>
+    <string name="LastName">Презиме</string>
+    <string name="FirstName">Име</string>
+    <string name="message">Ти си %1$s %2$s .</string>
+    <string name="action_canceled">Акција је отказана</string>
+    <string name="action_incomplete">Попуните сва поља</string>
+    <string name="final_action">Сада можете поздравити!</string>
+</resources>
