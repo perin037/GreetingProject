@@ -6,7 +6,7 @@
     <string name="save">Save</string>
     <string name="LastName">LastName</string>
     <string name="FirstName">FirstName</string>
-    <string name="message">Your name is %1$s and surename is %2$s .</string>
+    <string name="message">Your name is %1$s and surename is %2$s.</string>
     <string name="action_canceled">Action canceled</string>
     <string name="action_incomplete">Fill all data</string>
     <string name="final_action">Prees GREET button</string>

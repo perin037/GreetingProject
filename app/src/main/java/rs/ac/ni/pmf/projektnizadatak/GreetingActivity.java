@@ -1,5 +1,7 @@
 package rs.ac.ni.pmf.projektnizadatak;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +21,9 @@ public class GreetingActivity extends AppCompatActivity {
 
     private String _firstName = "";
     private String _lastName = "";
+
+    //dodatak zbog deprecated
+    private ActivityResultLauncher<Intent> _detailsActivityLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +45,14 @@ public class GreetingActivity extends AppCompatActivity {
 
         _labelMessage = findViewById(R.id.labelMessage);
 
+
+        //dodatak
+        _detailsActivityLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> onDetailsActivityResult(result.getResultCode(), result.getData())
+        );
     }
+
 
     private void greet(View view) {
         //Log.i(TAG, "First is " + _firstName);
@@ -58,7 +70,10 @@ public class GreetingActivity extends AppCompatActivity {
     private void enterName(View view) {
         //aktiviram intent kojim se pokrece druga aktivnost kako bi dosli do podataka
         final Intent intent = new Intent(this, DetailsActivity.class);
-        startActivityForResult(intent, REQUEST_DETAILS);
+        //startActivityForResult(intent, REQUEST_DETAILS);
+
+        //dodatak
+        _detailsActivityLauncher.launch(intent);
     }
 
     @Override
@@ -79,6 +94,20 @@ public class GreetingActivity extends AppCompatActivity {
                 break;
             default:
                 super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+
+    private void onDetailsActivityResult(int resultCode, Intent data) {
+        if(resultCode == RESULT_OK){
+            _firstName = data.getStringExtra(DetailsActivity.FIRST_KEY);
+            _lastName = data.getStringExtra(DetailsActivity.LAST_KEY);
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.final_action, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        if(resultCode == RESULT_CANCELED){
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.action_canceled, Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 }

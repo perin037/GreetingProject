@@ -7,7 +7,7 @@
     <string name="save">Сачувај</string>
     <string name="LastName">Презиме</string>
     <string name="FirstName">Име</string>
-    <string name="message">Ти си %1$s %2$s .</string>
+    <string name="message">Ти си %1$s %2$s.</string>
     <string name="action_canceled">Акција је отказана</string>
     <string name="action_incomplete">Попуните сва поља</string>
     <string name="final_action">Сада можете поздравити!</string>
