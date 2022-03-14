@@ -76,7 +76,7 @@ public class GreetingActivity extends AppCompatActivity {
         _detailsActivityLauncher.launch(intent);
     }
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode){
@@ -95,7 +95,7 @@ public class GreetingActivity extends AppCompatActivity {
             default:
                 super.onActivityResult(requestCode, resultCode, data);
         }
-    }
+    }*/
 
 
     private void onDetailsActivityResult(int resultCode, Intent data) {
